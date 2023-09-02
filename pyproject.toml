@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "the-world-news-backend"
+version = "0.1.0"
+description = ""
+authors = ["Adrian Aranda <adrienaranda@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11.2"
+fastapi = {extras = ["all"], version = "^0.101.1"}
+beautifulsoup4 = "^4.12.2"
+setuptools = "^68.1.2"
+requests = "^2.31.0"
+
+[tool.poetry.scripts]
+echo = "python3 the_world_news_backend.main:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
