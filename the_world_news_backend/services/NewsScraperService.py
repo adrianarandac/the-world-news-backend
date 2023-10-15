@@ -8,7 +8,6 @@ def fetch_news():
     try:
         response = requests.get(REDDIT_URL)
         site_json = json.loads(response.text)
-        print(site_json)
 
         post_titles = [
             {'title': post['data']['title'], 'url': 'https://www.reddit.com' + post['data']['permalink']}
@@ -17,8 +16,9 @@ def fetch_news():
         ]
     except:
         post_titles = [
-            {'title': "Sorry for the inconvenience, it seems Reddit is blocking scraping.\nGive it some time or "
-                      "click here to visit WorldNews subreddit!", 'url': 'https://www.reddit.com/r/worldnews'}
+            {'title': "Sorry for the inconvenience, it seems Reddit is not available for scrapping right now.\n"
+                      "Give it some time or click here to visit WorldNews subreddit!",
+             'url': 'https://www.reddit.com/r/worldnews'}
         ]
 
     return {'post_titles': post_titles}

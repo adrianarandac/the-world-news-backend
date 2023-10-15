@@ -13,7 +13,7 @@ setuptools = "^68.1.2"
 requests = "^2.31.0"
 
 [tool.poetry.scripts]
-echo = "python3 the_world_news_backend.main:app"
+start = "the_world_news_backend.main:start"
 
 [build-system]
 requires = ["poetry-core"]
