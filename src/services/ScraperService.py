@@ -1,7 +1,7 @@
 import requests
 import json
 
-from the_world_news_backend.Constants import MAX_ARTICLES, REDDIT_URL
+from src.Constants import MAX_ARTICLES, REDDIT_URL
 
 
 def fetch_news():

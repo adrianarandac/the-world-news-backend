@@ -1,7 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
 
-from the_world_news_backend.services.NewsScraperService import fetch_news
+from src.services.ScraperService import fetch_news
 
 app = FastAPI()
 
@@ -18,4 +18,4 @@ def scrape_worldnews():
 
 def start():
     """Launched with `poetry run start` at root level"""
-    uvicorn.run("the_world_news_backend.main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("src.main:app", host="0.0.0.0", port=8000, reload=True)
